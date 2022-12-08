@@ -1,9 +1,15 @@
-# Cello Environment
+# Pólis 3 API
 
-Esse ambiente contém Node, TypeScript, Truffle e celocli.
+API do projeto Pólis3
 
 ## Pré-requistos
 - [Docker](https://www.docker.com/)
 - [VSCode](https://code.visualstudio.com/)
     - [Extensão devcontainer](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers)
 
+## Instruções
+
+````
+git clone
+yarn install
+node ace serve --watch
