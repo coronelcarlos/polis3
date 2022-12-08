@@ -9,7 +9,25 @@ API do projeto Pólis3
 
 ## Instruções
 
-````
-git clone
+Fazer o clone da aplicação
+```
+git clone https://github.com/pedrorenan/polis3-api
+```
+Acessar a pasta do projeto
+```
+cd polis3-api
+```
+Instalar dependências
+```
 yarn install
+```
+
+Iniciar a blockchain local
+```
+yarn chain
+```
+
+Iniciar a API
+```
 node ace serve --watch
+```
