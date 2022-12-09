@@ -8,7 +8,7 @@
     "start": "node server.js",
     "lint": "eslint . --ext=.ts",
     "format": "prettier --write .",
-    "chain": "npx celo-devchain --port 8545"
+    "chain": "ganache --fork.url https://forno.celo.org"
   },
   "eslintConfig": {
     "extends": [

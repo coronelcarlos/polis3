@@ -9,6 +9,6 @@ RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
     && apt-get -y install --no-install-recommends libusb-dev libudev-dev libusb-1.0-0-dev
 
 # [Optional] Uncomment if you want to install more global node modules
-RUN su node -c "npm install -g truffle @celo/celocli"
+RUN su node -c "npm install -g truffle @celo/celocli ganache"
 
 ENV NO_SYNCCHECK true
