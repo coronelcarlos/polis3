@@ -5,13 +5,14 @@
 	"dockerComposeFile": "docker-compose.yml",
 	
 	"extensions": [
-		"JuanBlanco.solidity"
+		"JuanBlanco.solidity",
+		"jripouteau.adonis-vscode-extension"
 	],
 	// Features to add to the dev container. More info: https://containers.dev/features.
 	// "features": {},
 
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
-	"forwardPorts": [3334],
+	"forwardPorts": [3334, 8545],
 	"service": "api",
   	"workspaceFolder": "/workspace",
 

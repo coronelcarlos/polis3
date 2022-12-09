@@ -1,5 +1,17 @@
 {
   "commands": {
+    "chain:hello_world": {
+      "settings": {
+        "loadApp": true,
+        "stayAlive": false
+      },
+      "commandPath": "./commands/HelloWorldChain",
+      "commandName": "chain:hello_world",
+      "description": "Testa sua rede local...",
+      "args": [],
+      "aliases": [],
+      "flags": []
+    },
     "dump:rcfile": {
       "settings": {},
       "commandPath": "@adonisjs/core/build/commands/DumpRc",
