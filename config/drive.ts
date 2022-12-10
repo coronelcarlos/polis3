@@ -80,6 +80,11 @@ export default driveConfig({
       basePath: '/uploads',
     },
 
+    nftstorage: {
+      driver: 'nftstorage',
+      token: Env.get('NFTSTORAGE_TOKEN'),
+    },
+
     /*
     |--------------------------------------------------------------------------
     | S3 Driver

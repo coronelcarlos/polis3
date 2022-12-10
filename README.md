@@ -6,6 +6,7 @@ API do projeto Pólis3
 - [Docker](https://www.docker.com/)
 - [VSCode](https://code.visualstudio.com/)
     - [Extensão devcontainer](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers)
+- Conta válida em NFT.Storage e um TOKEN - [Veja aqui](https://nft.storage/#getting-started)
 
 ## Instruções
 
@@ -29,6 +30,8 @@ Inicializar arquivo de variáveis de ambiente
 cp .env.example .env
 ```
 
+Edite seu arquivo .env inserindo o TOKEN do NFT.Storage na varíavel NFTSTORAGE_TOKEN
+
 Iniciar a blockchain local
 ```
 yarn chain
@@ -43,3 +46,10 @@ Iniciar a API
 ```
 node ace serve --watch
 ```
+
+
+## Rotas
+
+protoloco | rota | parametros 
+----------|------|--------
+POST | /files | multipart form(file: file, name: string, description: string)

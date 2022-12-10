@@ -23,4 +23,5 @@ export default Env.rules({
   NODE_ENV: Env.schema.enum(['development', 'production', 'test'] as const),
   CHAIN_HOST: Env.schema.string({ format: 'url' }),
   CHAIN_PORT: Env.schema.number(),
+  NFTSTORAGE_TOKEN: Env.schema.string(),
 })
