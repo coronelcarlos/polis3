@@ -1,0 +1,49 @@
+// Permite uma interação do tipo comentário com o token do patriônio público
+pragma solidity ^0.6.0;
+
+contract NFTStrings {
+    // Mapping of NFT IDs to strings
+    mapping (uint256 => string) public nftStrings;
+
+    // Event that is emitted whenever a string is written
+    event StringWritten(uint256 indexed nftId, string message);
+
+    // Contract owner can create a new NFT with a given ID
+    function createNFT(uint256 nftId) external {
+        require(msg.sender == address(this), "Only the contract owner can create NFTs");
+        nftStrings[nftId] = "";
+    }
+
+    // Any user can write a string for a given NFT ID
+    function writeString(uint256 nftId, string memory message) external {
+        require(nftStrings[nftId] != "", "NFT does not exist");
+        nftStrings[nftId] = message;
+        emit StringWritten(nftId, message);
+    }
+}
+
+
+
+// Permite uma interação do tipo chamar função(interação direta com os contratos automatizados)
+pragma solidity ^0.6.0;
+
+contract NFTFunctions {
+    // Mapping of NFT IDs to functions
+    mapping (uint256 => function() external) public nftFunctions;
+
+    // Event that is emitted whenever a function is called
+    event FunctionCalled(uint256 indexed nftId);
+
+    // Contract owner can create a new NFT with a given ID and function
+    function createNFT(uint256 nftId, function() external nftFunction) external {
+        require(msg.sender == address(this), "Only the contract owner can create NFTs");
+        nftFunctions[nftId] = nftFunction;
+    }
+
+    // Any user can call the function associated with a given NFT ID
+    function callFunction(uint256 nftId) external {
+        require(nftFunctions[nftId] != 0, "NFT does not exist or has no associated function");
+        nftFunctions[nftId]();
+        emit FunctionCalled(nftId);
+    }
+}
