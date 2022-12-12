@@ -1,6 +1,6 @@
 # Pólis 3 API
 
-API do projeto Pólis3
+API do projeto Pólis3 e código de solidity demonstrando a possibilidade de execução do projeto.
 
 ## Pré-requistos
 - [Docker](https://www.docker.com/)
